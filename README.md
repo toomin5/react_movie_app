@@ -31,7 +31,8 @@ js로 구현된 비동기통신라이브러리axios를 사용하여 parsing이�
 
 \*비동기처리 axios가 완료될때가지 async,await을 이용한다.<br>
 3.loading을 표시하는 state를 작성하고 (state는 값이 변할수있음) setState를 호출해 변화된 부분을 업데이트한다.<br>
-loading을 true로 설정해놓고 api정보 다운이 끝나면 isloading을 false해준다. 이후 render에서 삼항연산자로 통해<br>
+loading을 true로 설정해놓고 api정보 다운이 끝나면 isloading을 false해준다.<br>
+이후 render에서 삼항연산자로 통해<br>
 movie div를 보여준다. 데이터로딩)componentWillMount() -> render() -> componentDidMount()
 
     render() {
@@ -90,6 +91,5 @@ isRequired를 호출하여 필수prop으로 정의 할 수 있다.<br>
         },
       }}
     >
-# movie_app_react
-# react_movie_app
-# react_movie_app
+
+# 주소 = https://toomin5.github.io/react_movie_app/#/
