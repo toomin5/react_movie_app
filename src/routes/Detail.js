@@ -18,7 +18,7 @@ class Detail extends React.Component {
           title={location.state.title}
         />
         <div className="detail_text">
-          <h1>{location.state.title}</h1>
+          <h1 className="detail_title">{location.state.title}</h1>
           <h5 className="movie__year">{location.state.year}</h5>
           <ul className="genres">
             {location.state.genres.map((genres, index) => (

@@ -10,24 +10,24 @@ React Js (2023 Update)
 js로 구현된 비동기통신라이브러리axios를 사용하여 parsing이나 stringify를 쉽게 도와준다.<br>
 
     class Home extends React.Component {
-    state = {
-    isLoading: true,
-    movies: [],
-    };
-    getMovies = async () => {
-    const {
+      state = {
+        isLoading: true,
+        movies: [],
+      };
+      getMovies = async () => {
+      const {
       data: {
         data: { movies },
       },
-    } = await axios.get(
-      "https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=rating"
-    );
-    this.setState({ movies, isLoading: false });
-    };
-    componentDidMount() {
-    //render를 하면 호출되는 lifecycle method
-    this.getMovies(); //component가 mount되면 getMovies를 호출
-    }
+      } = await axios.get(
+        "https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=rating"
+      );
+        this.setState({ movies, isLoading: false });
+      };
+      componentDidMount() {
+        //render를 하면 호출되는 lifecycle method
+        this.getMovies(); //component가 mount되면 getMovies를 호출
+      }
 
 \*비동기처리 axios가 완료될때가지 async,await을 이용한다.<br>
 3.loading을 표시하는 state를 작성하고 (state는 값이 변할수있음) setState를 호출해 변화된 부분을 업데이트한다.<br>
@@ -109,11 +109,11 @@ isRequired를 호출하여 필수prop으로 정의 할 수 있다.<br>
 클릭하지않고 주소창으로 detail페이지 접속할경우 state가 없어 정보가 없기에 Home으로 이동함
 
     class Detail extends React.Component {
-    componentDidMount() {
-    const { location, history } = this.props;
-    if (location.state === undefined) {
-      history.push("/");
-    } //클릭하지않고 url로 이동했을 때 홈페이지로 리다이렉트
+      componentDidMount() {
+        const { location, history } = this.props;
+          if (location.state === undefined) {
+          history.push("/");
+      } //클릭하지않고 url로 이동했을 때 홈페이지로 리다이렉트
     }
 
 # 주소 = https://toomin5.github.io/react_movie_app/#/
