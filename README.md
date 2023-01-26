@@ -33,7 +33,15 @@ js로 구현된 비동기통신라이브러리axios를 사용하여 parsing이�
 3.loading을 표시하는 state를 작성하고 (state는 값이 변할수있음) setState를 호출해 변화된 부분을 업데이트한다.<br>
 loading을 true로 설정해놓고 api정보 다운이 끝나면 isloading을 false해준다.<br>
 이후 render에서 삼항연산자로 통해<br>
-movie div를 보여준다. 데이터로딩)componentWillMount() -> render() -> componentDidMount()
+movie div를 보여준다. 데이터로딩)componentWillMount() -> render() -> componentDidMount()<br>
+
+1.async componentDidmount()
+
+    getMovies = asyncc() => {
+      await axios
+    }
+
+2.componentDidmount()앞에 async 붙이기<br> -새로운 함수에 axios.get()을 담고, componentDidmount()에서 호출<br> -함수내부 axios앞에 await을 붙여줌으로써 async가 무엇을 기다릴지 알려줌<br>
 
     render() {
     const { isLoading, movies } = this.state;
@@ -91,5 +99,21 @@ isRequired를 호출하여 필수prop으로 정의 할 수 있다.<br>
         },
       }}
     >
+
+### Detail.js
+
+브라우저와 리액트 라우터를 연결하면 history api에 접근할 수 있고 props에 location,history<br>
+객체를 전달받을 수 있다.<br>
+해당component의 props를 link state에 넣어 보내는방식<br>
+
+클릭하지않고 주소창으로 detail페이지 접속할경우 state가 없어 정보가 없기에 Home으로 이동함
+
+    class Detail extends React.Component {
+    componentDidMount() {
+    const { location, history } = this.props;
+    if (location.state === undefined) {
+      history.push("/");
+    } //클릭하지않고 url로 이동했을 때 홈페이지로 리다이렉트
+    }
 
 # 주소 = https://toomin5.github.io/react_movie_app/#/
