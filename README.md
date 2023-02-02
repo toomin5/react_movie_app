@@ -2,6 +2,8 @@
 
 React Js (2023 Update)
 
+## 주소 = https://toomin5.github.io/react_movie_app/#/
+
 ## 리액트와 영화정보API를 이용한 영화 웹서비스
 
 #### Home.js
@@ -115,5 +117,3 @@ isRequired를 호출하여 필수prop으로 정의 할 수 있다.<br>
           history.push("/");
       } //클릭하지않고 url로 이동했을 때 홈페이지로 리다이렉트
     }
-
-# 주소 = https://toomin5.github.io/react_movie_app/#/
