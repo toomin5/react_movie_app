@@ -4,7 +4,7 @@ React Js (2023 Update)
 
 ## 주소 = https://toomin5.github.io/react_movie_app/#/
 
-## 리액트와 영화정보API를 이용한 영화 웹서비스
+## 리액트와 영화정보API를 이용한 영화 웹서비스(클론코딩)
 
 #### Home.js
 
